@@ -1,5 +1,24 @@
 # Z7 自定义电子快门声音
 
+## Independent hardware testing context — October 24, 2026
+
+Building on this upstream Z7 port, an independent modified lab built and
+installed its first modified firmware on an original Nikon Z7 running C 3.80.
+The camera owner confirmed the update completed, the custom Shutter sound menu
+appeared, and WAV Preview became audible after that lab's playback corrections.
+
+Automatic shutter triggering remains unresolved in those lab builds: the latest
+tested hook repeats audio during live view, and Enabled OFF stops the loop.
+These are owner-reported observations without firmware readback. They do not
+establish per-photo timing or emergency recovery. The functional corrections
+belong to that independent lab; this documentation change does not add them to
+the upstream source. The trigger description below remains intended behavior.
+
+Source-only references: [playback observations](https://github.com/tylermcm/WonderLanternZ7/blob/c7f56266717af2481621110cae339772f6240c83/AUDIO_PLAYBACK_FIX.md)
+and [trigger regression](https://github.com/tylermcm/WonderLanternZ7/blob/c7f56266717af2481621110cae339772f6240c83/LIVEVIEW_SOUND_REGRESSION.md).
+
+## Intended interface
+
 构建包含该功能后，设置菜单增加 `Shutter sound`。主菜单为：
 
 ```text
