@@ -32,7 +32,8 @@ python patch.py full --source "Z_7_0380.bin" --output "output/EG16100380.BIN"
 [构建说明](docs/build.md)。
 
 生成的是完整 `eg1610_038000.bi` 模块，末尾带 2 字节 CRC。若需要给 Z7 QEMU
-使用，取输出前 33,052,088 字节作为 MAIN payload。
+使用，只去掉末尾 2 字节 CRC，并保留全部追加代码。33,052,088 是原厂 MAIN 的
+长度，不能用它截断修改后的产物。
 
 ## 自定义声音
 
